@@ -31,6 +31,9 @@
 		6992143E1BE97662001F6607 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6992143D1BE97662001F6607 /* SystemConfiguration.framework */; };
 		699214401BE9766A001F6607 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6992143F1BE9766A001F6607 /* libz.tbd */; };
 		699214421BE97673001F6607 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 699214411BE97673001F6607 /* libsqlite3.tbd */; };
+		699214441BE9792E001F6607 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699214431BE9792E001F6607 /* DetailViewController.swift */; };
+		699214461BE97941001F6607 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699214451BE97941001F6607 /* TableViewController.swift */; };
+		6992144A1BE9EA52001F6607 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699214491BE9EA52001F6607 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		6992143D1BE97662001F6607 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6992143F1BE9766A001F6607 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		699214411BE97673001F6607 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		699214431BE9792E001F6607 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		699214451BE97941001F6607 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		699214491BE9EA52001F6607 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +155,11 @@
 		699213F11BE974F8001F6607 /* practiceParse */ = {
 			isa = PBXGroup;
 			children = (
+				699214491BE9EA52001F6607 /* Reachability.swift */,
 				699213F21BE974F8001F6607 /* AppDelegate.swift */,
 				699213F41BE974F8001F6607 /* ViewController.swift */,
+				699214451BE97941001F6607 /* TableViewController.swift */,
+				699214431BE9792E001F6607 /* DetailViewController.swift */,
 				699213F61BE974F8001F6607 /* Main.storyboard */,
 				699213F91BE974F8001F6607 /* Assets.xcassets */,
 				699213FB1BE974F8001F6607 /* LaunchScreen.storyboard */,
@@ -332,8 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699214441BE9792E001F6607 /* DetailViewController.swift in Sources */,
 				699213F51BE974F8001F6607 /* ViewController.swift in Sources */,
 				699213F31BE974F8001F6607 /* AppDelegate.swift in Sources */,
+				6992144A1BE9EA52001F6607 /* Reachability.swift in Sources */,
+				699214461BE97941001F6607 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +578,7 @@
 				699214191BE974F9001F6607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6992141A1BE974F9001F6607 /* Build configuration list for PBXNativeTarget "practiceParseTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +587,7 @@
 				6992141C1BE974F9001F6607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6992141D1BE974F9001F6607 /* Build configuration list for PBXNativeTarget "practiceParseUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +596,7 @@
 				6992141F1BE974F9001F6607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
