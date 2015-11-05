@@ -10,14 +10,12 @@ import UIKit
 import Parse
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     
-self.label!.text = Reachability.NetworkStatus.NotReachable.description
-    }
+         }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,11 +29,8 @@ self.label!.text = Reachability.NetworkStatus.NotReachable.description
         save.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             print("Object has been saved.")
         }
-
-        
-        
-        
+    
     }
-
+    
 }
 

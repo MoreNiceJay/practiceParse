@@ -10,11 +10,13 @@ import UIKit
 import Parse
 import Bolts
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-   
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
        
@@ -24,11 +26,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Parse.setApplicationId("8syENqWmPJKTCVxq8XHLbGXSXais91YNFIdOOyjv",
                 clientKey: "b7M8qGBUQqCuAUmAaEelCOrqsEBXMk8Lz1NDnl6o")
             
-            
+        
+        
+        let reachability: Reachability
+       
+            reachability = Reachability.reachabilityForInternetConnection()!
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "reachabilityChanged:",
+            name: ReachabilityChangedNotification,
+            object: reachability)
+        
+        reachability.startNotifier()
+        
+        
+        
             PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         return true
         }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -50,7 +67,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
+        
+        
+           }
     
+    func reachabilityChanged(note: NSNotification) {
+        
+        let reachability = note.object as! Reachability
+        
+        if reachability.isReachable() {
+            if reachability.isReachableViaWiFi() {
+                print("Reachable via WiFi")
+            } else {
+                print("Reachable via Cellular")
+            }
+        } else {
+            print("Not reachable")
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
 

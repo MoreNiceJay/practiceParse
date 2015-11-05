@@ -137,11 +137,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGx-L6-bgB">
-                                <rect key="frame" x="48" y="215" width="45" height="30"/>
+                                <rect key="frame" x="240" y="434" width="45" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="deleteButtonTapped:" destination="dSX-Ah-w1H" eventType="touchUpInside" id="TFh-OQ-aMv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXh-Ro-KyA">
+                                <rect key="frame" x="52" y="390" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-Yq-xBT">
+                                <rect key="frame" x="85" y="434" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="edit"/>
+                                <connections>
+                                    <action selector="editButtonTapped:" destination="dSX-Ah-w1H" eventType="touchUpInside" id="Apw-5S-VXW"/>
+                                    <segue destination="1P0-fD-JUO" kind="show" identifier="detailToMain" id="tAE-fR-LfL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -150,6 +165,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="texField" destination="uXh-Ro-KyA" id="8uk-Nx-pwV"/>
                         <outlet property="titleLabel" destination="noL-ch-KYe" id="flf-Uj-QJz"/>
                     </connections>
                 </viewController>
@@ -175,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saR-eh-ujd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="423"/>
+            <point key="canvasLocation" x="1351" y="-251"/>
         </scene>
     </scenes>
 </document>
