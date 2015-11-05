@@ -144,19 +144,18 @@
                                     <action selector="deleteButtonTapped:" destination="dSX-Ah-w1H" eventType="touchUpInside" id="TFh-OQ-aMv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uXh-Ro-KyA">
-                                <rect key="frame" x="52" y="390" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X0O-NR-Lsj">
+                                <rect key="frame" x="30" y="387" width="162" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl3-Yq-xBT">
-                                <rect key="frame" x="85" y="434" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrB-B0-nBS">
+                                <rect key="frame" x="96" y="434" width="30" height="30"/>
                                 <animations/>
                                 <state key="normal" title="edit"/>
                                 <connections>
-                                    <action selector="editButtonTapped:" destination="dSX-Ah-w1H" eventType="touchUpInside" id="Apw-5S-VXW"/>
-                                    <segue destination="1P0-fD-JUO" kind="show" identifier="detailToMain" id="tAE-fR-LfL"/>
+                                    <action selector="editButtonTapped:" destination="dSX-Ah-w1H" eventType="touchUpInside" id="IaC-0u-YdX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -165,13 +164,14 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="texField" destination="uXh-Ro-KyA" id="8uk-Nx-pwV"/>
+                        <outlet property="textField" destination="X0O-NR-Lsj" id="2mF-4h-v72"/>
                         <outlet property="titleLabel" destination="noL-ch-KYe" id="flf-Uj-QJz"/>
+                        <segue destination="1P0-fD-JUO" kind="show" identifier="detailToMain" id="E5e-J9-5yN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLu-Jf-Tp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="423"/>
+            <point key="canvasLocation" x="1921" y="440"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sep-o8-zxa">
@@ -191,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saR-eh-ujd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="-251"/>
+            <point key="canvasLocation" x="233" y="446"/>
         </scene>
     </scenes>
 </document>
